@@ -4,7 +4,8 @@ from django.db import models
 
 
 class AnnoTool(models.Model):
-    resume = models.FileField(blank=True, null=True, upload_to='uploaded/%Y/%M/%D')
+#    id = models.
+    resume = models.FileField(blank=True, null=True, upload_to='uploaded')
     name = models.CharField(max_length=100)
     degree = models.CharField(max_length=100)
     college = models.CharField(max_length=100)
@@ -14,4 +15,4 @@ class AnnoTool(models.Model):
     summary = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.resume
+        return self.name
